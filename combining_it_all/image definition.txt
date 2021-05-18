@@ -1,0 +1,42 @@
+    Mat BlueShortCut, DistanceMeasurement, FollowBlack, Football, GreenShortCut, InclineMeasurement, RedShortCut, ShapeCounter, StopLight, YellowShortCut;
+
+    Mat BlueShortCut_HSV, DistanceMeasurement_HSV, FollowBlack_HSV, Football_HSV, GreenShortCut_HSV, InclineMeasurement_HSV, RedShortCut_HSV, ShapeCounter_HSV, StopLight_HSV, YellowShortCut_HSV;
+
+    Mat BlueShortCut_GREY, DistanceMeasurement_GREY, FollowBlack_GREY, Football_GREY, GreenShortCut_GREY, InclineMeasurement_GREY, RedShortCut_GREY, ShapeCounter_GREY, StopLight_GREY, YellowShortCut_GREY;
+
+    BlueShortCut = readImage("BlueShortCut.PNG");
+    DistanceMeasurement = readImage("DistanceMeasurement.PNG");
+    FollowBlack = readImage("FollowBlack.PNG");
+    Football = readImage("Football.PNG");
+    GreenShortCut = readImage("GreenShortCut.PNG");
+    InclineMeasurement = readImage("InclineMeasurement.PNG");
+    RedShortCut = readImage("RedShortCut.PNG");
+    ShapeCounter = readImage("ShapeCounter.PNG");
+    StopLight = readImage("StopLight.PNG");
+    YellowShortCut = readImage("YellowShortCut.PNG");
+
+
+    cvtColor(BlueShortCut, BlueShortCut_HSV, COLOR_BGR2HSV);
+    cvtColor(DistanceMeasurement, DistanceMeasurement_HSV, COLOR_BGR2HSV);
+    cvtColor(FollowBlack, FollowBlack_HSV, COLOR_BGR2HSV);
+    cvtColor(Football, Football_HSV, COLOR_BGR2HSV);
+    cvtColor(GreenShortCut, GreenShortCut_HSV, COLOR_BGR2HSV);
+    cvtColor(InclineMeasurement, InclineMeasurement_HSV, COLOR_BGR2HSV);
+    cvtColor(RedShortCut, RedShortCut_HSV, COLOR_BGR2HSV);
+    cvtColor(ShapeCounter, ShapeCounter_HSV, COLOR_BGR2HSV);
+    cvtColor(StopLight, StopLight_HSV, COLOR_BGR2HSV);
+    cvtColor(YellowShortCut, YellowShortCut_HSV, COLOR_BGR2HSV);
+
+    
+    inRange(BlueShortCut_HSV, Scalar(100,40,70), Scalar(179,255,255), BlueShortCut_GREY);  //pink
+    inRange(DistanceMeasurement_HSV, Scalar(100,40,70), Scalar(179,255,255), DistanceMeasurement_GREY);  //pink
+    inRange(FollowBlack_HSV, Scalar(100,40,70), Scalar(179,255,255), FollowBlack_GREY);  //pink
+    inRange(Football_HSV, Scalar(100,40,70), Scalar(179,255,255), Football_GREY);  //pink
+    inRange(GreenShortCut_HSV, Scalar(100,40,70), Scalar(179,255,255), GreenShortCut_GREY);  //pink
+    inRange(InclineMeasurement_HSV, Scalar(100,40,70), Scalar(179,255,255), InclineMeasurement_GREY);  //pink
+    inRange(RedShortCut_HSV, Scalar(100,40,70), Scalar(179,255,255), RedShortCut_GREY);  //pink
+    inRange(ShapeCounter_HSV, Scalar(100,40,70), Scalar(179,255,255), ShapeCounter_GREY);  //pink
+    inRange(StopLight_HSV, Scalar(100,40,70), Scalar(179,255,255), StopLight_GREY);  //pink
+    inRange(YellowShortCut_HSV, Scalar(100,40,70), Scalar(179,255,255), YellowShortCut_GREY);  //pink
+
+

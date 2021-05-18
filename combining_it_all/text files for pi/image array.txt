@@ -1,0 +1,38 @@
+Mat image_array[10];
+
+image_array[0] = BlueShortCut_GREY;
+image_array[1] = DistanceMeasurement_GREY;
+image_array[2] = FollowBlack_GREY;
+image_array[3] = Football_GREY;
+image_array[4] = GreenShortCut_GREY;
+image_array[5] = InclineMeasurement_GREY;
+image_array[6] = RedShortCut_GREY;
+image_array[7] = ShapeCounter_GREY;
+image_array[8] = StopLight_GREY;
+image_array[9] = YellowShortCut_GREY;
+
+
+
+float match_percentage[10];
+
+int image_num = 0;
+
+for(img_num; img_num < 10; img_num++)        //change to size of iamges loaded in
+{
+    match_percentage[img_num] = compareImages(transformed_GREY, image_array[img_num]);
+    cout << "\nImage no: " << img_num << "\tMatch percentage: " << match_percentage[img_num] << "\n\n" << endl;
+}
+
+
+/*
+    image_array[1] = BlueShortCut_GREY;
+    image_array[2] = DistanceMeasurement_GREY;
+    image_array[3] = FollowBlack_GREY;
+    image_array[4] = Football_GREY;
+    image_array[5] = GreenShortCut_GREY;
+    image_array[6] = InclineMeasurement_GREY;
+    image_array[7] = RedShortCut_GREY;
+    image_array[8] = ShapeCounter_GREY;
+    image_array[9] = StopLight_GREY;
+    image_array[10] = YellowShortCut_GREY;
+*/
